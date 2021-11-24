@@ -4,22 +4,27 @@ public class CalcolaValutazione {
 	int idStudente;
 	int percentualeAssenze;
 	double mediaVoti;
-	boolean bocciato;
+	
 	
 	CalcolaValutazione(int idStudente ,int percentualeAssenze, double mediaVoti) {
-		bocciato = false;
+		
 		this.idStudente = idStudente;
 		this.percentualeAssenze = percentualeAssenze;
 		this.mediaVoti = mediaVoti;
 		}
 	
-	void Calcolo () {
+	void calcolo () {
 		if (percentualeAssenze > 50) {
-			bocciato = true;
-		}else if(percentualeAssenze > 25  && mediaVoti < 2) {
-			bocciato = true;
+			System.out.println("Bocciato");
+			
+			
+		}else if(percentualeAssenze > 25  && mediaVoti <= 2) {
+			System.out.println("Bocciato");
+		}else if (mediaVoti <2) {
+			System.out.println("Bocciato");
+			
 		}else {
-			bocciato = false;
+			System.out.println("Promosso");
 		}
 	}
 	
