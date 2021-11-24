@@ -13,18 +13,18 @@ public class CalcolaValutazione {
 		this.mediaVoti = mediaVoti;
 		}
 	
-	void calcolo () {
+	boolean promosso () {
 		if (percentualeAssenze > 50) {
-			System.out.println("Bocciato");
+			return  false;
 			
 			
 		}else if(percentualeAssenze > 25  && mediaVoti <= 2) {
-			System.out.println("Bocciato");
+			return  false;
 		}else if (mediaVoti <2) {
-			System.out.println("Bocciato");
+			return  false;
 			
 		}else {
-			System.out.println("Promosso");
+			return  true;
 		}
 	}
 	

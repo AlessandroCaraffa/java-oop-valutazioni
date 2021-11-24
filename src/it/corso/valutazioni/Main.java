@@ -23,7 +23,11 @@ public class Main {
 			calc[i] = new CalcolaValutazione(i+1,percentualeAssenze,mediaVoti);
 			
 			System.out.print("Id studente : "+ calc[i].idStudente + " Risultato :" );
-			calc[i].calcolo();
+			if (calc[i].promosso()) {
+				System.out.println("Promosso");
+			}else {
+				System.out.println("Bocciato");
+			}
 		}
 		
 
